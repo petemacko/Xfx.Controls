@@ -155,14 +155,14 @@ namespace Xfx.Controls.iOS.Renderers
 
         private void SetUnfocusedColor()
         {
-            Control.FloatingLabelTextColor = Element.PlaceholderColor == Color.Default
+            Control.FloatingLabelTextColor = Element.PlaceholderColor == Xamarin.Forms.Color.Default
                 ? Control.TextColor
                 : Element.PlaceholderColor.ToUIColor();
         }
 
         private void SetFocusedColor()
         {
-            Control.FloatingLabelActiveTextColor = Element.ActivePlaceholderColor == Color.Accent
+            Control.FloatingLabelActiveTextColor = Element.ActivePlaceholderColor == Xamarin.Forms.Color.Accent
                 ? Control.TintColor
                 : Element.ActivePlaceholderColor.ToUIColor();
         }
@@ -228,10 +228,10 @@ namespace Xfx.Controls.iOS.Renderers
         {
             if (_hasError) return UIColor.Red.CGColor;
             return _hasFocus
-                ? (Element.ActivePlaceholderColor == Color.Accent
+                ? (Element.ActivePlaceholderColor == Xamarin.Forms.Color.Accent
                     ? Control.TintColor.CGColor
                     : Element.ActivePlaceholderColor.ToCGColor())
-                : (Element.PlaceholderColor == Color.Default
+                : (Element.PlaceholderColor == Xamarin.Forms.Color.Default
                     ? Control.TextColor.CGColor
                     : Element.PlaceholderColor.ToCGColor());
         }
@@ -287,7 +287,7 @@ namespace Xfx.Controls.iOS.Renderers
 
         private void SetTextColor()
         {
-            if ((Element.TextColor == Color.Default) || !Element.IsEnabled)
+            if ((Element.TextColor == Xamarin.Forms.Color.Default) || !Element.IsEnabled)
                 Control.TextColor = _defaultTextColor;
             else
                 Control.TextColor = Element.TextColor.ToUIColor();
