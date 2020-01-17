@@ -4,11 +4,11 @@ namespace Xfx
 {
     public class XfxSelectedItemChangedEventArgs : SelectedItemChangedEventArgs
     {
-        public int SelectedItemIndex { get; private set; }
+        //public new int SelectedItemIndex { get; private set; }
 
-        public XfxSelectedItemChangedEventArgs(object selectedItem, int selectedIndex) : base(selectedItem)
+        public XfxSelectedItemChangedEventArgs(object selectedItem, int selectedIndex) : base(selectedItem, selectedIndex)
         {
-            SelectedItemIndex = selectedIndex;
+            //SelectedItemIndex = selectedIndex;
         }
     }
 }
